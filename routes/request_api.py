@@ -17,7 +17,7 @@ supabase = Client(
 
 
 def make_return(response):
-	ip = requests.get(ip_url)
+	ip = requests.get(ip_url).text
 	data={
 		"source_ip":ip,
 		"source_name":"orders service"
