@@ -3,3 +3,4 @@ flask-cors
 flask-swagger-ui
 supabase-client
 aioflask
+requests
