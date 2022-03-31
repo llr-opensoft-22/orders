@@ -20,7 +20,7 @@ def make_return(response):
 	ip = requests.get(ip_url).text
 	data={
 		"source_ip":ip,
-		"source_name":"orders service"
+		"source_name":"orders service",
 		"response":response
 	}
 	return jsonify(data)
