@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify, request, abort, Response
 from datetime import datetime, timedelta
 from supabase_client import Client
 import requests
-
+import socket
 
 
 REQUEST_API = Blueprint('request_api', __name__)
@@ -17,7 +17,7 @@ supabase = Client(
 
 
 def make_return(response):
-	ip = requests.get(ip_url).text
+	ip = socket.gethostname()
 	data={
 		"source_ip":ip,
 		"source_name":"orders service",
